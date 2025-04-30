@@ -4,7 +4,6 @@ catboost_info/
 **/**.pt
 **/**.ipynb
 !agg_results.ipynb
-**/**.npy
 **/**.gz
 **/**.sh
 **/**.obj
