@@ -5,7 +5,6 @@ catboost_info/
 **/**.ipynb
 !agg_results.ipynb
 **/**.gz
-**/**.sh
 **/**.obj
 **/**.png
 **/**.tar
