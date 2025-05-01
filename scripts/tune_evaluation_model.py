@@ -12,7 +12,7 @@ parser.add_argument('tune_type', type=str)
 parser.add_argument('device', type=str)
 
 args = parser.parse_args()
-data_path = Path(f"/home/cw0466/ece477-final-project/data/{args.ds_name}/authentic")
+data_path = Path(f"/home/cw0466/ece477-final-project/data/{args.ds_name}")
 best_params = None
 
 assert args.tune_type in ("cv", "val")
