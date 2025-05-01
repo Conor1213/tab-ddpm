@@ -1,5 +1,5 @@
 seed = 0
-parent_dir = "exp/breast_cancer/check"
+parent_dir = "exp/breast_cancer/many-exps/0"
 real_data_path = "/home/cw0466/ece477-final-project/data/breast_cancer/authentic"
 model_type = "mlp"
 num_numerical_features = 30
@@ -12,21 +12,25 @@ num_classes = 2
 
 [model_params.rtdl_params]
 d_layers = [
-    256,
+    512,
+    512,
+    512,
+    512,
+    512,
     256,
 ]
 dropout = 0.0
 
 [diffusion_params]
-num_timesteps = 1000
+num_timesteps = 100
 gaussian_loss_type = "mse"
 scheduler = "cosine"
 
 [train.main]
-steps = 1000
-lr = 0.001
-weight_decay = 1e-05
-batch_size = 4096
+steps = 20000
+lr = 0.0002288113668475521
+weight_decay = 0.0
+batch_size = 256
 
 [train.T]
 seed = 0
@@ -38,7 +42,7 @@ cat_encoding = "__none__"
 y_policy = "default"
 
 [sample]
-num_samples = 20800
+num_samples = 455
 batch_size = 10000
 seed = 0
 

@@ -1,8 +1,8 @@
 {
-    "learning_rate": 0.06605210083761866,
-    "depth": 7,
-    "l2_leaf_reg": 1.014366822804501,
-    "bagging_temperature": 0.3224895199122277,
+    "learning_rate": 0.17620610114286733,
+    "depth": 3,
+    "l2_leaf_reg": 2.557026247092544,
+    "bagging_temperature": 0.33932671093036876,
     "leaf_estimation_iterations": 9,
     "iterations": 2000,
     "early_stopping_rounds": 50,
