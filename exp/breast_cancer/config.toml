@@ -1,6 +1,6 @@
 seed = 0
 parent_dir = "exp/breast_cancer/check"
-real_data_path = "/home/cw0466/ece477-final-project/data/breast_cancer/authentic"
+real_data_path = "/home/cw0466/ece477-final-project/data/breast_cancer/"
 model_type = "mlp"
 num_numerical_features = 30
 device = "cuda:0"
