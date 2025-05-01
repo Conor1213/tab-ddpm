@@ -2,7 +2,7 @@ seed = 0
 parent_dir = "exp/heart_failure/check"
 real_data_path = "/home/cw0466/ece477-final-project/data/heart_failure/"
 model_type = "mlp"
-num_numerical_features = 30
+num_numerical_features = 2
 device = "cuda:0"
 
 [model_params]
