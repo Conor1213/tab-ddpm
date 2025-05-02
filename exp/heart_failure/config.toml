@@ -2,12 +2,11 @@ seed = 0
 parent_dir = "exp/heart_failure/check"
 real_data_path = "/home/cw0466/ece477-final-project/data/heart_failure/"
 model_type = "mlp"
-num_numerical_features = 2
+num_numerical_features = 7
 device = "cuda:0"
 
 [model_params]
 is_y_cond = true
-d_in = 30
 num_classes = 2
 
 [model_params.rtdl_params]
@@ -34,7 +33,7 @@ normalization = "quantile"
 num_nan_policy = "__none__"
 cat_nan_policy = "__none__"
 cat_min_frequency = "__none__"
-cat_encoding = "__none__"
+cat_encoding = "one-hot"
 y_policy = "default"
 
 [sample]
