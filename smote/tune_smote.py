@@ -93,6 +93,7 @@ config["smote_params"] = study.best_params
 config["smote_params"]["frac_samples"] = 2 ** config["smote_params"]["frac_samples"]
 
 lib.dump_config(config, config["parent_dir"]+"config.toml")
+print(f'{config["parent_dir"]+"config.toml"}')
 
 subprocess.run(['python3.9', "scripts/eval_seeds.py", '--config', f'{config["parent_dir"]+"config.toml"}',
                 '10', "smote", eval_type, "catboost", "5"], check=True)

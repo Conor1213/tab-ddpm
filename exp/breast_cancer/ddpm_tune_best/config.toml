@@ -41,7 +41,7 @@ cat_encoding = "one-hot"
 y_policy = "default"
 
 [sample]
-num_samples = 409
+num_samples = 818
 batch_size = 10000
 seed = 0
 

@@ -8,7 +8,7 @@
 #SBATCH --mem=2G                 # total memory
 #SBATCH --gres=gpu:1             # number of gpus per node
 #SBATCH --mem=2G                 # total memory
-#SBATCH --time=12:00:00          # total run time limit (HH:MM:SS)
+#SBATCH --time=00:20:00          # total run time limit (HH:MM:SS)
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-type=fail         # send email if job fails
@@ -19,4 +19,4 @@ module purge
 module load anaconda3/2023.9
 conda activate tddpm
 
-python scripts/eval_seeds.py --config /home/cw0466/ece477-final-project/tab-ddpm/exp/breast_cancer/ddpm_tune_best/config.toml 10 ddpm synthetic mlp 5
+python scripts/eval_seeds.py --config /home/cw0466/ece477-final-project/tab-ddpm/exp/breast_cancer/ddpm_tune_best/config.toml 1 ddpm synthetic mlp 5
