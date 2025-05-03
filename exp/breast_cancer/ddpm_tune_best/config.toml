@@ -12,22 +12,22 @@ num_classes = 2
 [model_params.rtdl_params]
 d_layers = [
     512,
+    128,
+    128,
+    128,
+    128,
     512,
-    512,
-    512,
-    512,
-    256,
 ]
 dropout = 0.0
 
 [diffusion_params]
-num_timesteps = 100
+num_timesteps = 1000
 gaussian_loss_type = "mse"
 scheduler = "cosine"
 
 [train.main]
-steps = 20000
-lr = 0.0002288113668475521
+steps = 30000
+lr = 0.0003213388530545032
 weight_decay = 0.0
 batch_size = 256
 

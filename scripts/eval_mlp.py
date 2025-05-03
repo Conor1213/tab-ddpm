@@ -80,7 +80,7 @@ def train_mlp(
     print(f'Train size: {X["train"].shape}, Val size {X["val"].shape}')
 
     if params is None:
-        params = lib.load_json(f"/home/rototo/tab-diffusion/tuned_models/mlp/{Path(real_data_path).name}_cv.json")
+        params = lib.load_json(f"/home/cw0466/ece477-final-project/tab-ddpm/tuned_models/mlp/{Path(real_data_path).name}_cv.json")
 
     mlp_params = {}
     if params is not None:

@@ -1,0 +1,10 @@
+{
+    "task_type": "binclass",
+    "name": "heart_failure",
+    "id": "heart_failure--id",
+    "train_size": 215,
+    "val_size": 54,
+    "test_size": 30,
+    "n_num_features": 7,
+    "n_cat_features": 5
+}

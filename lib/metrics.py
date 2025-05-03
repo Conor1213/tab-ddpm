@@ -18,10 +18,11 @@ class MetricsReport:
     def __init__(self, report: dict, task_type: TaskType):
         self._res = {k: {} for k in report.keys()}
         if task_type in (TaskType.BINCLASS, TaskType.MULTICLASS):
-            self._metrics_names = ["acc", "f1"]
+            self._metrics_names = ["acc", "f1", "balanced_acc"]
             for k in report.keys():
                 self._res[k]["acc"] = report[k]["accuracy"]
                 self._res[k]["f1"] = report[k]["macro avg"]["f1-score"]
+                self._res[k]["balanced_acc"] = report[k]["balanced_acc"]
                 if task_type == TaskType.BINCLASS:
                     self._res[k]["roc_auc"] = report[k]["roc_auc"]
                     self._metrics_names.append("roc_auc")
@@ -153,6 +154,7 @@ def calculate_metrics(
         result = cast(
             Dict[str, Any], skm.classification_report(y_true, labels, output_dict=True)
         )
+        result['balanced_acc'] = skm.balanced_accuracy_score(y_true, labels)
         if task_type == TaskType.BINCLASS:
             result['roc_auc'] = skm.roc_auc_score(y_true, probs)
     return result

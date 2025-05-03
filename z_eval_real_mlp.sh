@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#SBATCH --job-name=tune_ddpm_breastcancer  # create a short name for your job
+#SBATCH --job-name=tune_eval_heart_failure  # create a short name for your job
 #SBATCH --nodes=1                # node count
 #SBATCH --ntasks=1               # total number of tasks across all nodes
 #SBATCH --cpus-per-task=1        # cpu-cores per task (>1 if multi-threaded tasks)
@@ -19,4 +19,4 @@ module purge
 module load anaconda3/2023.9
 conda activate tddpm
 
-python scripts/tune_ddpm.py breast_cancer 409 synthetic catboost ddpm_tune --eval_seed
+python scripts/eval_seeds.py --config /home/cw0466/ece477-final-project/tab-ddpm/exp/breast_cancer/ddpm_tune_best/config.toml 50 ddpm real mlp 1

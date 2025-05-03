@@ -19,4 +19,4 @@ module purge
 module load anaconda3/2023.9
 conda activate tddpm
 
-python scripts/tune_ddpm.py breast_cancer 409 synthetic catboost ddpm_tune --eval_seed
+python scripts/tune_ddpm_mini.py heart_failure 215 synthetic catboost ddpm_tune --eval_seed

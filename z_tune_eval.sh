@@ -19,4 +19,4 @@ module purge
 module load anaconda3/2023.9
 conda activate tddpm
 
-python scripts/tune_evaluation_model.py breast_cancer catboost cv cuda
+python scripts/tune_evaluation_model.py breast_cancer mlp cv cuda

@@ -110,7 +110,7 @@ study = optuna.create_study(
     sampler=optuna.samplers.TPESampler(seed=0),
 )
 
-study.optimize(objective, n_trials=50, show_progress_bar=True)
+study.optimize(objective, n_trials=2, show_progress_bar=True)
 
 best_config_path = parent_path / f'{prefix}_best/config.toml'
 best_config = study.best_trial.user_attrs['config']
